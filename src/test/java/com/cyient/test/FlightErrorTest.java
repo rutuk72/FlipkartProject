@@ -30,6 +30,8 @@ public class FlightErrorTest extends Browser {
 		Thread.sleep(3000);
 
 		//click on round trip
+		
+
 		main.clikonroundtrip();
 		
 		//click on search
@@ -52,33 +54,4 @@ public class FlightErrorTest extends Browser {
 	
 	
 	
-	@Test(dataProvider = "validCredentialExcelData", dataProviderClass = DataProviderUser.class)
-	public void destinationErrorTest(String username, String password, String expectedname) throws InterruptedException {
-		LoginProcessPage obj = new LoginProcessPage(driver);
-		obj.enterusername(username);
-		obj.enterpassword(password);
-		obj.clickOnLogin();
-
-		FlightPage main = new FlightPage(driver);
-		
-		Thread.sleep(5000);
-		main.clickonflight();
-		
-		Thread.sleep(3000);
-		
-		//Enter city into origin
-		main.entercity();
-		
-		//click on search
-		main.clickonsearch();
-		
-		//Destination error validation
-		String expecteddestinationerror="destination cannot be empty";
-		String actualdestinationerror=main.destinationerror();
-		System.out.println(actualdestinationerror);
-		Assert.assertEquals(actualdestinationerror, expecteddestinationerror);
-		
-		
-	}
-
 }

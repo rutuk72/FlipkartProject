@@ -70,6 +70,7 @@ public class PlaceOrder extends Browser {
 		js.executeScript("window.scrollBy(0,350)", "");
 
 		// Save for later
+		Thread.sleep(2000);
 		tvs.saveforlater();
 		Thread.sleep(3000);
 
@@ -94,13 +95,15 @@ public class PlaceOrder extends Browser {
 		//validate tv price
 		String actualtvprice = tvs.validtvprice();
 		System.out.println(actualtvprice);
-		String expectedtvprice = "54,000";
+		String expectedtvprice = "₹57,999";
 		Assert.assertEquals(actualtvprice, expectedtvprice);
-
-//		js.executeScript("window.scrollBy(0,350)", "");
-//		
-//		Thread.sleep(2000);
-//		tvs.removetv();
+		
+		//Remove item from cart for multiple test run
+		Thread.sleep(2000);
+		js.executeScript("window.scrollBy(0,500)", "");
+		Thread.sleep(2000);
+		tvs.removetv();
+		
 
 	}
 

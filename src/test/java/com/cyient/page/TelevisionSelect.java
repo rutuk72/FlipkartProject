@@ -17,7 +17,7 @@ public class TelevisionSelect {
 	private By enternewpinlocator =By.xpath("//input[@placeholder='Enter delivery pincode']");
 	private By checknewpinlocator =By.xpath("//span[@class='UgLoKg']");
 	private By validtvnamelocator =By.xpath("//a[contains(text(),'Mi Q1 138.8 cm (55 inch) QLED Ultra HD (4K) Smart ')]");
-	private By checktvpricelocator =By.xpath("//span[contains(text(),'₹57,999')]");
+	private By checktvpricelocator =By.xpath("//span[@class='_2-ut7f _1WpvJ7']");
 	private By removetvlocator =By.xpath("//div[normalize-space()='Remove']");
 	
 private WebDriver driver;

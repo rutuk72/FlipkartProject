@@ -34,7 +34,7 @@ public class Browser {
    @AfterMethod
 	public void teardown() {
 		driver.quit();
-	}
+}
 	
 	
 }

@@ -14,6 +14,7 @@ public class FlightPage {
 	private By originerrorlocator=By.xpath("//div[normalize-space()='origin cannot be empty']");
 	private By destinationerrorlocator=By.xpath("//div[normalize-space()='destination cannot be empty']");
 	private By citylocator=By.xpath("//input[@name='0-departcity']");
+	private By closewindowlocator=By.xpath("//button[contains(text(),'✕')]");
 	
 	
 
@@ -44,9 +45,13 @@ public class FlightPage {
 		return errortwo;
 	}
 	
-	public void entercity() {
-		driver.findElement(citylocator).sendKeys("Mumbai, BOM - Chatrapati Shivaji International Airport");
+	
+	public void entercity(String city) {
+		driver.findElement(citylocator).sendKeys(city);
 	}
 	
+	public void closewindow() {
+		driver.findElement(closewindowlocator).click();
+	}
 
 }

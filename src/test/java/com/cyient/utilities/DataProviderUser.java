@@ -13,5 +13,12 @@ return main;
 		
 	}
 	
+	@DataProvider
+	public Object[][] citynamedata() throws IOException{
+Object[][] main= ExcelData.getSheet("src/test/resources/testdata/userdata.xlsx","Sheet2" );
+return main;
+		
+	}
+
 
 }
